@@ -1,0 +1,166 @@
+body {font-size: 62.5%;
+  background: rgb(50, 40, 236);
+  background: linear-gradient(
+    90deg,
+    rgb(89, 228, 55) 3%,
+    rgb(238, 55, 171) 45%,
+    rgba(0, 212, 255, 1) 98%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 100rem;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  background-color: rgb(151, 105, 238);
+  animation: intro 2s ease-in-out;
+  box-shadow: 0rem 0.4rem 1.rem black;
+  transform: rotateX(3deg);
+  padding: 3%;
+  cursor: pointer;
+  position: relative;
+}
+.corner-left {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+.rotate {
+  transform: rotateX(1deg);
+}
+
+.profile-row {
+  display: flex;
+  width: 100%;
+}
+
+.profile-row.center {
+  justify-content: center;
+}
+
+.column-center {
+  align-items: center;
+}
+
+.profile-row.column {
+  flex-direction: column;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 20%;
+  border: 0.4rem solid black;
+}
+
+.sub-headline {
+  color: rgb(8, 88, 104);
+  font-size: 2vmin;
+  margin: 0.4rem;
+  font-style: italic;
+  font-weight: bold;
+  animation: fade-In 2s ease-in-out;
+}
+
+.title {
+  margin: 0.4rem;
+  font-weight: bold;
+  color: #3e0068;
+  animation: fade-In 2s ease-in-out;
+}
+
+.link {
+  border: 0.3rem solid rgba(121, 9, 80, 1);
+  height: 20%;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.1rem  0.2rem 0.5rem black;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(8, 88, 104);
+  text-decoration: none;
+}
+
+i {
+  padding: 1rem;
+  font-size: 3vmin;
+  color: #833ab4;
+  transition: 0.3s ease-in-out;
+}
+i:hover {
+  transform: scale(1.15);
+}
+
+#send:hover::after {
+  content: ">>Send Email";
+  font-size: 2vmin;
+  position: absolute;
+  padding: 0.5rem;
+}
+
+.link:hover {
+  transform: scale(1.1);
+  background-color: #833ab4;
+  color: white;
+}
+
+.link:focus {
+  transform: scale(0.9);
+  background-color: #833ab4;
+  color: white;
+}
+
+.link:hover i {
+  color: white;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+@keyframes intro {
+  from {
+    transform: rotateX(-20deg);
+  }
+  to {
+    transform: rotateX(1deg);
+  }
+}
+
+@keyframes fade-In {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and(max-width:500px){
+  /*for mobiles*/
+  .menu, .main, .right {
+    width: 100;
+
+  }
+  
+}
+@media only screen and(max-width:800px){
+  /*for tablet*/
+  .main{
+    width: 80;
+    padding: 0;
+  }
+  .right{
+    width: 100%;
+  }
+  
+}
